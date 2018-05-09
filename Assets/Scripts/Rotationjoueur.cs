@@ -27,7 +27,7 @@ public class Rotationjoueur : MonoBehaviour {
         moventDirection = transform.TransformDirection(moventDirection);
         moventDirection *= vitesse;
 
-        Manage.Instance.ResetScore();
+        Manage.Instance.Scoreazero();
         Manage.Instance.SetStatus(Constantes.tappepourdebStatus);
 
         Jeumanage.Instance.Etatjeu = Etatjeu.Debut;
@@ -37,7 +37,7 @@ public class Rotationjoueur : MonoBehaviour {
         control = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
+    // lamise à jour est appelée une fois par image
     void Update()
     {
         switch (Jeumanage.Instance.Etatjeu)
@@ -53,13 +53,13 @@ public class Rotationjoueur : MonoBehaviour {
                 }
                 break;
             case Etatjeu.Joue:
-                Manage.Instance.IncreaseScore(0.001f);
+                Manage.Instance.ajourScore(0.001f);
 
                 CheckHeight();
 
                 Detectsautoubalayegauchedroite();
 
-                //application de la grivité
+                //application de la gravité
                 moventDirection.y -= gravite * Time.deltaTime;
                 //deplace le joueur
                 control.Move(moventDirection * Time.deltaTime);
@@ -89,8 +89,8 @@ public class Rotationjoueur : MonoBehaviour {
 
     private void Detectsautoubalayegauchedroite()
     {
-        var detectDirection = insertDetecteur.DetectDirection();
-        if (control.isGrounded && detectDirection.HasValue && detectDirection == Direction.Haut)
+        var insertDirection = insertDetecteur.DetectDirection();
+        if (control.isGrounded && insertDirection.HasValue && insertDirection == Direction.Haut)
         {
             moventDirection.y = vitessesaut;
             anime.SetBool(Constantes.Animationsaut, true);
@@ -101,16 +101,16 @@ public class Rotationjoueur : MonoBehaviour {
         }
 
 
-        if (Jeumanage.Instance.peutbalayer && detectDirection.HasValue &&
-         control.isGrounded && detectDirection == Direction.Droite)
+        if (Jeumanage.Instance.peutbalayer && insertDirection.HasValue &&
+         control.isGrounded && insertDirection == Direction.Droite)
         {
             transform.Rotate(0, 90, 0);
             moventDirection = Quaternion.AngleAxis(90, Vector3.up) * moventDirection;
             //allow the user to swipe once per swipe location
             Jeumanage.Instance.peutbalayer = false;
         }
-        else if (Jeumanage.Instance.peutbalayer && detectDirection.HasValue &&
-         control.isGrounded && detectDirection == Direction.Gauche)
+        else if (Jeumanage.Instance.peutbalayer && insertDirection.HasValue &&
+         control.isGrounded && insertDirection == Direction.Gauche)
         {
             transform.Rotate(0, -90, 0);
             moventDirection = Quaternion.AngleAxis(-90, Vector3.up) * moventDirection;

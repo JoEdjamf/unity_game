@@ -19,7 +19,7 @@ public class Manage : MonoBehaviour
         }
     }
 
-    //singleton implementation
+    //implementation
     private static Manage instance;
     public static Manage Instance
     {
@@ -39,33 +39,33 @@ public class Manage : MonoBehaviour
     private float score = 0;
 
 
-    public void ResetScore()
+    public void Scoreazero()
     {
         score = 0;
-        UpdateScoreText();
+        TextmiseajourScore();
     }
 
-    public void SetScore(float value)
+    public void definiScore(float valeur)
     {
-        score = value;
-        UpdateScoreText();
+        score = valeur;
+        TextmiseajourScore();
     }
 
-    public void IncreaseScore(float value)
+    public void ajourScore(float valeur)
     {
-        score += value;
-        UpdateScoreText();
+        score += valeur;
+        TextmiseajourScore();
     }
 
-    private void UpdateScoreText()
+    private void TextmiseajourScore()
     {
-        ScoreText.text = score.ToString();
+        TextduScore.text = score.ToString();
     }
 
     public void SetStatus(string text)
     {
-        StatusText.text = text;
+        TextStatus.text = text;
     }
 
-    public Text ScoreText, StatusText;
+    public Text TextduScore, TextStatus;
 }

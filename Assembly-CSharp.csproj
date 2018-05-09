@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{41632AB3-9647-8E10-2ABD-6FB59C24BAA5}</ProjectGuid>
+    <ProjectGuid>{CF35597D-89F4-D73B-0BA2-1C58402453C5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,20 +61,29 @@
   <ItemGroup>
     <Compile Include="Assets\Campfire Pack\Script\SwitchView.cs" />
     <Compile Include="Assets\GrassRoadRace\Script\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\Bordure.cs" />
+    <Compile Include="Assets\Scripts\Calleridbalaye.cs" />
     <Compile Include="Assets\Scripts\Caméra.cs" />
     <Compile Include="Assets\Scripts\Constantes.cs" />
+    <Compile Include="Assets\Scripts\Destruction.cs" />
     <Compile Include="Assets\Scripts\Etatjeu.cs" />
     <Compile Include="Assets\Scripts\Input\Detectebalayage.cs" />
     <Compile Include="Assets\Scripts\Input\Detecteur.cs" />
     <Compile Include="Assets\Scripts\Input\TouchDirection.cs" />
     <Compile Include="Assets\Scripts\Jeumanage.cs" />
     <Compile Include="Assets\Scripts\Manage.cs" />
+    <Compile Include="Assets\Scripts\Mvtlateraljoueur.cs" />
+    <Compile Include="Assets\Scripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\Points.cs" />
+    <Compile Include="Assets\Scripts\PointsCollider.cs" />
     <Compile Include="Assets\Scripts\Rotationjoueur.cs" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/jordy/OneDrive - Ynov/Cours/unity jeu/projet_Ousti_Joe/projet_Ousti_joe/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
+    <Compile Include="Assets\Scripts\Scene.cs" />
+    <Compile Include="Assets\Scripts\sucre.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/jordy/OneDrive - Ynov/Cours/unity jeu/projet_Ousti_Joe/projet_Ousti_joe/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/jordy/OneDrive - Ynov/Cours/unity jeu/projet_Ousti_Joe/projet_Ousti_joe/unity_game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>C:/Users/jordy/OneDrive - Ynov/Cours/unity jeu/projet_Ousti_Joe/projet_Ousti_joe/unity_game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
