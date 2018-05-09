@@ -47,10 +47,29 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Campfire Pack\Script\SwitchView.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\BoatController.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\GameEntity\FloatingGameEntityFlat.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\GameEntity\FloatingGameEntityRealist.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\GameEntity\FloatingGameEntityStorm.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\GameEntity\GameEntity.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\OceanAdvanced.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\Orbital.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\PropellerBoats.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\SplashGenerator.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\Tools\Proxies.cs" />
+     <Compile Include="Assets\FloatingEntities\Scripts\WakeGenerator.cs" />
      <Compile Include="Assets\GrassRoadRace\Script\CameraMove.cs" />
      <Compile Include="Assets\Scirpt\Camera.cs" />
+     <Compile Include="Assets\Scirpt\Constants.cs" />
+     <Compile Include="Assets\Scirpt\GameManager.cs" />
+     <Compile Include="Assets\Scirpt\GameState.cs" />
+     <Compile Include="Assets\Scirpt\Obstacle.cs" />
      <Compile Include="Assets\Scirpt\Player.cs" />
      <Compile Include="Assets\Scirpt\Player1.cs" />
+     <Compile Include="Assets\Scirpt\UIManager.cs" />
+     <None Include="Assets\FloatingEntities\Shaders\OceanAdvanced.shader" />
+     <None Include="Assets\FloatingEntities\Shaders\WaterToolBox.cginc" />
+     <None Include="Assets\FloatingEntities\Shaders\Ocean.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -71,6 +90,9 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="ArchimedsLab">
+ <HintPath>/Users/Ousti/Desktop/Cours - Ingésup/Bachelor 2/Gaming Unity/unity_game/Assets/FloatingEntities/Scripts/ArchimedsLab.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
