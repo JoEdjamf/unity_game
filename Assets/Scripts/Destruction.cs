@@ -6,10 +6,10 @@ public class Destruction : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Invoke("Destruit", tpsdevie);
+        Invoke("Detruit", tpsdevie);
     }
 
-    void Destruit()
+    void Detruit()
     {
         if (Jeumanage.Instance.Etatjeu != Etatjeu.Mort)
             Destroy(gameObject);
