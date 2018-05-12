@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
+using System.Text;
 
 public class Jeumanage : MonoBehaviour {
 
@@ -30,9 +33,9 @@ public class Jeumanage : MonoBehaviour {
         }
     }
 
-    protected Jeumanage()
+ protected Jeumanage()
     {
-        Etatjeu = global::Etatjeu.Debut;
+        Etatjeu = Etatjeu.Debut;
         peutbalayer = false;
     }
 
