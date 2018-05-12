@@ -45,7 +45,7 @@ public class Rotationjoueur : MonoBehaviour {
             case Etatjeu.Debut:
                 if (Input.GetMouseButtonUp(0))
                 {
-                    anime.SetBool(Constantes.DebutAnimation, true);
+                    anime.SetBool(Constantes.AnimationStarted, true);
                     var instance = Jeumanage.Instance;
                     instance.Etatjeu = Etatjeu.Joue;
 
@@ -66,7 +66,7 @@ public class Rotationjoueur : MonoBehaviour {
 
                 break;
             case Etatjeu.Mort:
-                anime.SetBool(Constantes.DebutAnimation, false);
+                anime.SetBool(Constantes.AnimationStarted, false);
                 if (Input.GetMouseButtonUp(0))
                 {
                     //recommence
@@ -93,11 +93,11 @@ public class Rotationjoueur : MonoBehaviour {
         if (control.isGrounded && insertDirection.HasValue && insertDirection == Direction.Haut)
         {
             moventDirection.y = vitessesaut;
-            anime.SetBool(Constantes.Animationsaut, true);
+            anime.SetBool(Constantes.AnimationJump, true);
         }
         else
         {
-            anime.SetBool(Constantes.Animationsaut, false);
+            anime.SetBool(Constantes.AnimationJump, false);
         }
 
 

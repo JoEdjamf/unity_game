@@ -51,7 +51,7 @@ public class Mvtlateraljoueur : MonoBehaviour {
             case Etatjeu.Debut:
                 if (Input.GetMouseButtonUp(0))
                 {
-                    anime.SetBool(Constantes.DebutAnimation, true);
+                    anime.SetBool(Constantes.AnimationStarted, true);
                     var instance = Jeumanage.Instance;
                     instance.Etatjeu = Etatjeu.Joue;
 
@@ -82,7 +82,7 @@ public class Mvtlateraljoueur : MonoBehaviour {
 
                 break;
             case Etatjeu.Mort:
-                anime.SetBool(Constantes.DebutAnimation, false);
+                anime.SetBool(Constantes.AnimationStarted, false);
                 if (Input.GetMouseButtonUp(0))
                 {
                     //restart
@@ -110,11 +110,11 @@ public class Mvtlateraljoueur : MonoBehaviour {
             && !changervoie)
         {
             moventDirection.y = vitessesaut;
-            anime.SetBool(Constantes.Animationsaut, true);
+            anime.SetBool(Constantes.AnimationJump, true);
         }
         else
         {
-            anime.SetBool(Constantes.Animationsaut, false);
+            anime.SetBool(Constantes.AnimationJump, false);
         }
 
 

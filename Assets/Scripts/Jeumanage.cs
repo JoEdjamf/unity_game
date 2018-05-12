@@ -32,7 +32,7 @@ public class Jeumanage : MonoBehaviour {
 
     protected Jeumanage()
     {
-        Etatjeu = global::Etatjeu.Debut;
+        Etatjeu = Etatjeu.Debut;
         peutbalayer = false;
     }
 
