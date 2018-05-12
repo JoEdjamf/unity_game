@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/ousti_joe.unity
-  isLoaded: 1
-  isActive: 1
