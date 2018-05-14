@@ -1,8 +1,8 @@
 ﻿public static class Constantes
 {
 	public static readonly string etiquettejoueur = "Joueur";
-	public static readonly string DebutAnimation = "Debut";
-	public static readonly string Animationsaut = "Saut";
+	public static readonly string AnimationStarted = "started";
+	public static readonly string AnimationJump = "jump";
 	public static readonly string etiquettebordurechemin = "etiquettebordurechemin ";
 
 	/// <summary>
