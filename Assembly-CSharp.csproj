@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Calleridbalaye.cs" />
     <Compile Include="Assets\Scripts\Caméra.cs" />
     <Compile Include="Assets\Scripts\Constantes.cs" />
+    <Compile Include="Assets\Scripts\controljoueur.cs" />
     <Compile Include="Assets\Scripts\Destruction.cs" />
     <Compile Include="Assets\Scripts\Etatjeu.cs" />
     <Compile Include="Assets\Scripts\Input\Detectebalayage.cs" />
